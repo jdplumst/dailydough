@@ -35,7 +35,8 @@
     "dev": "bunchee --watch",
     "check-types": "tsc --noEmit",
     "lint": "eslint src/",
-    "test": "vitest"
+    "test": "vitest run",
+    "test:watch": "vitest --watch"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -43,7 +44,9 @@
     "@types/node": "^22.15.3",
     "bunchee": "^6.4.0",
     "eslint": "^9.31.0",
-    "typescript": "5.8.2"
+    "jsdom": "^26.1.0",
+    "typescript": "5.8.2",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
     "@types/react": ">=18",

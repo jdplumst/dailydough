@@ -15,7 +15,14 @@
     },
     "test": {
       "outputs": ["coverage/**"],
-      "dependsOn": []
+      "dependsOn": ["transit", "^test"]
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "transit": {
+      "dependsOn": ["^transit"]
     },
     "lint": {
       "dependsOn": ["^build", "^lint"]
