@@ -11,6 +11,7 @@ export default defineConfig({
           ...sharedConfig.test,
           // Project-specific configuration for packages
           // ...
+          environment: "jsdom",
         },
       },
       {
