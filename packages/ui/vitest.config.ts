@@ -1,7 +1,3 @@
-import { defineConfig } from "vitest/config";
+import { uiConfig } from "@repo/vitest-config/ui";
 
-export default defineConfig({
-  test: {
-    environment: "jsdom",
-  },
-});
+export default uiConfig;
