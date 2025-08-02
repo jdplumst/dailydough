@@ -1,5 +1,5 @@
 {
-  "name": "kitchen-sink",
+  "name": "dailydough",
   "private": true,
   "scripts": {
     "build": "turbo run build",
