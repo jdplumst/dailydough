@@ -1,5 +1,6 @@
 import { defineConfig } from "vitest/config";
 import { sharedConfig } from "@repo/vitest-config";
+import path from "path";
 
 export default defineConfig({
   ...sharedConfig,
@@ -11,15 +12,25 @@ export default defineConfig({
           ...sharedConfig.test,
           // Project-specific configuration for packages
           // ...
-          environment: "jsdom",
         },
       },
       {
-        root: "./apps",
+        root: "./apps/react-client",
         test: {
           ...sharedConfig.test,
           // Project-specific configuration for apps
           environment: "jsdom",
+        },
+        resolve: {
+          alias: {
+            "@": path.resolve("./apps/react-client", "./src"),
+          },
+        },
+      },
+      {
+        root: "./apps/hono-api",
+        test: {
+          ...sharedConfig.test,
         },
       },
     ],
