@@ -42,21 +42,12 @@ importers:
         specifier: ^4.8.12
         version: 4.8.12
     devDependencies:
-      '@cloudflare/vite-plugin':
-        specifier: ^1.2.3
-        version: 1.11.0(vite@6.3.5)(wrangler@4.27.0)
       drizzle-kit:
         specifier: ^0.31.4
         version: 0.31.4
       tsx:
         specifier: ^4.20.3
         version: 4.20.3
-      vite:
-        specifier: ^6.3.5
-        version: 6.3.5(tsx@4.20.3)
-      vite-ssr-components:
-        specifier: ^0.3.0
-        version: 0.3.0
       wrangler:
         specifier: ^4.17.0
         version: 4.27.0
@@ -440,30 +431,6 @@ packages:
     dependencies:
       unenv: 2.0.0-rc.19
       workerd: 1.20250730.0
-    dev: true
-
-  /@cloudflare/vite-plugin@1.11.0(vite@6.3.5)(wrangler@4.27.0):
-    resolution: {integrity: sha512-NVK5n6CTRf0cXItSc+X3UJZ37xKCLybbSEUDYuZNGzvAsbwivgI66eKl7+BKTVq55fo17YbrrIBQAUsQkgopHQ==}
-    peerDependencies:
-      vite: ^6.1.0 || ^7.0.0
-      wrangler: ^4.27.0
-    dependencies:
-      '@cloudflare/unenv-preset': 2.5.0(unenv@2.0.0-rc.19)(workerd@1.20250730.0)
-      '@mjackson/node-fetch-server': 0.6.1
-      '@rollup/plugin-replace': 6.0.2(rollup@4.38.0)
-      get-port: 7.1.0
-      miniflare: 4.20250730.0
-      picocolors: 1.1.1
-      tinyglobby: 0.2.13
-      unenv: 2.0.0-rc.19
-      vite: 6.3.5(tsx@4.20.3)
-      wrangler: 4.27.0
-      ws: 8.18.0
-    transitivePeerDependencies:
-      - bufferutil
-      - rollup
-      - utf-8-validate
-      - workerd
     dev: true
 
   /@cloudflare/workerd-darwin-64@1.20250730.0:
@@ -1531,10 +1498,6 @@ packages:
   /@levischuck/tiny-cbor@0.2.11:
     resolution: {integrity: sha512-llBRm4dT4Z89aRsm6u2oEZ8tfwL/2l6BwpZ7JcyieouniDECM5AqNgr/y08zalEIvW3RSK4upYyybDcmjXqAow==}
     dev: false
-
-  /@mjackson/node-fetch-server@0.6.1:
-    resolution: {integrity: sha512-9ZJnk/DJjt805uv5PPv11haJIW+HHf3YEEyVXv+8iLQxLD/iXA68FH220XoiTPBC4gCg5q+IMadDw8qPqlA5wg==}
-    dev: true
 
   /@neondatabase/serverless@1.0.1:
     resolution: {integrity: sha512-O6yC5TT0jbw86VZVkmnzCZJB0hfxBl0JJz6f+3KHoZabjb/X08r9eFA+vuY06z1/qaovykvdkrXYq3SPUuvogA==}
@@ -4272,11 +4235,6 @@ packages:
     engines: {node: '>=8.0.0'}
     dev: true
 
-  /get-port@7.1.0:
-    resolution: {integrity: sha512-QB9NKEeDg3xxVwCCwJQ9+xycaz6pBB6iQ76wiWMl1927n0Kir6alPiP+yuiICLLU4jpMe08dXfpebuQppFA2zw==}
-    engines: {node: '>=16'}
-    dev: true
-
   /get-proto@1.0.1:
     resolution: {integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==}
     engines: {node: '>= 0.4'}
@@ -6697,17 +6655,6 @@ packages:
       - tsx
       - yaml
 
-  /vite-ssr-components@0.3.0:
-    resolution: {integrity: sha512-1GHYrn0XKe6ix6u6GZDQFagVFqqW5PbBn+eemAC61tEksMIw3JR016tIqhbuqtDOssSHGVhH+l6xEPtkb2RGHw==}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      '@babel/parser': 7.28.0
-      '@babel/traverse': 7.28.0
-      picomatch: 4.0.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /vite@5.4.14(@types/node@22.15.3):
     resolution: {integrity: sha512-EK5cY7Q1D8JNhSaPKVK4pwBFvaTmZxEnoKXLG/U9gmdDcihQGNzFlgIvaxezFR4glP1LsuiedwMBqCXH3wZccA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -6795,57 +6742,6 @@ packages:
       tinyglobby: 0.2.13
     optionalDependencies:
       fsevents: 2.3.3
-
-  /vite@6.3.5(tsx@4.20.3):
-    resolution: {integrity: sha512-cZn6NDFE7wdTpINgs++ZJ4N49W2vRp8LCKrn3Ob1kYNtOo21vfDoaV5GzBfLU4MovSAB8uNRm4jgzVQZ+mBzPQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
-      jiti: '>=1.21.0'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.16.0
-      tsx: ^4.8.1
-      yaml: ^2.4.2
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      jiti:
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      sass-embedded:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-      tsx:
-        optional: true
-      yaml:
-        optional: true
-    dependencies:
-      esbuild: 0.25.4
-      fdir: 6.4.4(picomatch@4.0.2)
-      picomatch: 4.0.2
-      postcss: 8.5.6
-      rollup: 4.41.0
-      tinyglobby: 0.2.13
-      tsx: 4.20.3
-    optionalDependencies:
-      fsevents: 2.3.3
-    dev: true
 
   /vitest@3.2.4(@types/node@22.15.3):
     resolution: {integrity: sha512-LUCP5ev3GURDysTWiP47wRRUpLKMOfPh+yKTx3kVIEiu5KOMeqzpnYNsKyOoVrULivR8tLcks4+lga33Whn90A==}
