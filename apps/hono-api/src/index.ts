@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { config } from "dotenv";
 import { auth } from "./lib/better-auth";
 import { session } from "./db/schema";
-import { Client, neon } from "@neondatabase/serverless";
+import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
 const app = new Hono<{ Bindings: CloudflareBindings }>();
 
@@ -15,8 +15,6 @@ app.on(["GET", "POST"], "/api/*", (c) => {
 });
 
 app.get("/health", async (c, ctx) => {
-  // console.log(process.env.DATABASE_URL);
-
   const sql = neon(c.env.DATABASE_URL);
   const db = drizzle(sql);
   const result = await db.select().from(session);
