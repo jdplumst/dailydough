@@ -1,6 +1,5 @@
 import "./styles.css";
-import { CounterButton } from "@repo/ui/counter-button";
-import { Link } from "@repo/ui/link";
+import { Button } from "@/components/ui/button";
 
 function App() {
   return (
@@ -9,16 +8,16 @@ function App() {
         Admin <br />
         <span>Kitchen Sink</span>
       </h1>
-      <CounterButton />
+      <Button>Click me</Button>
       <p className="description">
         Built With{" "}
-        <Link href="https://turborepo.com" newTab>
+        <a href="https://turborepo.com" target="_blank">
           Turborepo
-        </Link>
+        </a>
         {" & "}
-        <Link href="https://vitejs.dev/" newTab>
+        <a href="https://vitejs.dev/" target="_blank">
           Vite
-        </Link>
+        </a>
       </p>
     </div>
   );
